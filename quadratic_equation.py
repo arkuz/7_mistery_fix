@@ -2,11 +2,13 @@ from math import sqrt
 
 
 def calc_root1(a, b, discriminant):
-    return (-b - sqrt(discriminant)) / (2 * a)
+    root = (-b - sqrt(discriminant)) / (2 * a)
+    return root
 
 
 def calc_root2(a, b, discriminant):
-    return (-b + sqrt(discriminant)) / (2 * a)
+    root = (-b + sqrt(discriminant)) / (2 * a)
+    return root
 
 
 def get_roots(a, b, c):
