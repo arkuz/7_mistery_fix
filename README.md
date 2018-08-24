@@ -1,50 +1,38 @@
 # Решатель квадратных уравнений
 
-Данный проект посвящен знакомству с таким понятием, как тестирование, а конкретно с модулем unittest. В скрипте quadratic_equation.py находится алгоритм решения квадратных уравнений. В скрипте tests.py содержатся тесты для алгоритма квадратных уравнений. 
+Данный проект посвящен решению квадратных уравнений. По входным данным `a, b, c` расчитывается дискриминант и находятся корни уравнений.
 
 # Как использовать
 
-```bash
-Name of file "roots.py"
+Импортируем функцию `get_roots()` из модуля `quadratic_equation.py`
+```python
+from quadratic_equation import get_roots
+```
 
+Вызываем функцию с параметрами `get_roots(a, b, c)`.
+```python
+root1, root2 = get_roots(1, -2, 1)
+```
+
+
+# Как запускать
+
+Создать файл `roots.py` с кодом:
+```python
 from quadratic_equation import get_roots
 
-def print_roots(root1, root2):
-    print(root1)
-    print(root2)
+root1, root2 = get_roots(1, -2, 1)
 
-root1, root2 = get_roots(1, -2, 1)
-print_roots(root1, root2)
-root1, root2 = get_roots(1, 2, -3)
-print_roots(root1, root2)
-root1, root2 = get_roots(1, -2, 1)
-print_roots(root1, root2)
-root1, root2 = get_roots(1, 2, 3)
+print('root1 = {0}, root2 = {1}'.format(root1, root2))
 ```
-# Как запустить
 
-Скрипт требует для своей работы установленного интерпретатора Python версии 3.5
-
-Запуск на Linux:
-
+Результат выполнения:
 ```bash
-python3 tests.py
-....
-----------------------------------------------------------------------
-Ran 4 tests in 0.000s
-
-OK
-
-python3 roots.py
-1.0
-None
--3.0
-1.0
-1.0
-None
+$python3 roots.py
+root1 = 1.0, root2 = None
 ```
 
-Запуск на Windows происходит аналогично.
+Запуск на Windows аналогичен.
 
 # Цели проекта
 
